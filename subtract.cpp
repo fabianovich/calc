@@ -1,5 +1,5 @@
 #include "Header.hpp"
 
-int subtract(int a, int b){
+float subtract(float a, float b){
 	return a - b;
 }

@@ -1,5 +1,5 @@
 #include "Header.hpp"
 
-int multiply(int a, int b){
+float multiply(float a, float b){
 	return a * b;
 }

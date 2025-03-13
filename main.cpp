@@ -8,8 +8,8 @@ bool isValidOperator(char math_operation) {
             math_operation == '*' || math_operation == '/');
 }
 
-int process(char math_operation, int a, int b) {
-    int result = 0;
+float process(char math_operation, float a, float b) {
+    float result = 0;
     if (math_operation == '+') {
         result = add(a, b);
     }
@@ -29,8 +29,8 @@ int process(char math_operation, int a, int b) {
 
 int main() {
     char math_operation;
-    int a;
-    int b;
+    float a;
+    float b;
     cout << "----- [CALC] -----\nslang for calculator" << endl;
     cout << "-\n-\n-" << endl;
     cout << "which mathematical operation do you want to perform?\nchoose between: \n + for addition, \n - for subtraction, \n * for multiplication, \n / for division" << endl;
@@ -45,7 +45,7 @@ int main() {
     cout << "second number: ";
     cin >> b;
     
-    int result = process(math_operation, a, b);
+    float result = process(math_operation, a, b);
     cout << "result: " << result << endl;
     system("pause");
     return 0;
