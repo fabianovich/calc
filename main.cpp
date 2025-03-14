@@ -31,7 +31,7 @@ int main() {
     char math_operation;
     float a;
     float b;
-    cout << "----- [CALC] -----\nslang for calculator" << endl;
+    cout << "------ [CALC] ------\nslang for calculator" << endl;
     cout << "-\n-\n-" << endl;
     cout << "which mathematical operation do you want to perform?\nchoose between: \n + for addition, \n - for subtraction, \n * for multiplication, \n / for division" << endl;
     cin >> math_operation;
