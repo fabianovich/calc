@@ -22,31 +22,43 @@ float process(char math_operation, float a, float b) {
     else if (math_operation == '/') {
         result = divide(a, b);
     }
-    
-    return result;
 
+    return result;
 }
 
 int main() {
     char math_operation;
     float a;
     float b;
+    string calcspree;
+
     cout << "------ [CALC] ------\nslang for calculator" << endl;
     cout << "-\n-\n-" << endl;
-    cout << "which mathematical operation do you want to perform?\nchoose between: \n + for addition, \n - for subtraction, \n * for multiplication, \n / for division" << endl;
-    cin >> math_operation;
-    if (!isValidOperator(math_operation)) {
-        cout << "i don't know that one, maybe try something else\n = use a valid operator!!!!!" << endl;
-        system("pause");
-        return 1; // Exit with error code
+
+    while (true) {
+        cout << "which mathematical operation do you want to perform?\nchoose between: \n + for addition, \n - for subtraction, \n * for multiplication, \n / for division" << endl;
+        cin >> math_operation;
+
+        if (!isValidOperator(math_operation)) {
+            cout << "i don't know that one, maybe try something else\n = use a valid operator!!!!!" << endl;
+            continue;
+        }
+
+        cout << "first number: ";
+        cin >> a;
+        cout << "second number: ";
+        cin >> b;
+
+        float result = process(math_operation, a, b);
+        cout << "result: " << result << endl;
+
+        cout << "do you want to do another calc? (yes/no)" << endl;
+        cin >> calcspree;
+
+        if (calcspree == "no") {
+            break;
+        }
     }
-    cout << "first number: ";
-    cin >> a;
-    cout << "second number: ";
-    cin >> b;
-    
-    float result = process(math_operation, a, b);
-    cout << "result: " << result << endl;
-    system("pause");
+
     return 0;
 }
