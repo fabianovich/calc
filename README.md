@@ -1,7 +1,7 @@
-------[CALC]------
-addition
-subtraction
-multiplication
-division
-
-c++
+------[CALC]------\
+addition\
+subtraction\
+multiplication\
+division\
+\
+c++\
