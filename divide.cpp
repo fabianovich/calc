@@ -1,5 +1,5 @@
 #include "Header.hpp"
 
-int divide(int a, int b){
+float divide(float a, float b){
 	return a / b;
 }

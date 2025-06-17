@@ -2,9 +2,9 @@
 #define HEADER_HPP
 
 // Declarations
-int add(int a, int b);
-int subtract(int a, int b);
-int multiply(int a, int b);
-int divide(int a, int b);
+float add(float a, float b);
+float subtract(float a, float b);
+float multiply(float a, float b);
+float divide(float a, float b);
 
 #endif 
