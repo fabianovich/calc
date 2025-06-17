@@ -3,6 +3,11 @@
 
 using namespace std;
 
+bool isValidOperator(char math_operation) {
+    return (math_operation == '+' || math_operation == '-' || 
+            math_operation == '*' || math_operation == '/');
+}
+
 int process(char math_operation, int a, int b) {
     int result = 0;
     if (math_operation == '+') {
@@ -17,7 +22,9 @@ int process(char math_operation, int a, int b) {
     else if (math_operation == '/') {
         result = divide(a, b);
     }
+    
     return result;
+
 }
 
 int main() {
@@ -28,6 +35,11 @@ int main() {
     cout << "-\n-\n-" << endl;
     cout << "which mathematical operation do you want to perform?\nchoose between: \n + for addition, \n - for subtraction, \n * for multiplication, \n / for division" << endl;
     cin >> math_operation;
+    if (!isValidOperator(math_operation)) {
+        cout << "i don't know that one, maybe try something else\n = use a valid operator!!!!!" << endl;
+        system("pause");
+        return 1; // Exit with error code
+    }
     cout << "first number: ";
     cin >> a;
     cout << "second number: ";
@@ -35,6 +47,6 @@ int main() {
     
     int result = process(math_operation, a, b);
     cout << "result: " << result << endl;
-    
+    system("pause");
     return 0;
 }
